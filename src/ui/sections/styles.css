@@ -1,0 +1,103 @@
+h4,h5,.h5{
+    font-family: 'Orbitron', sans-serif;
+    color: #9fa1a4;
+}
+
+#about{
+    padding-block: 3rem;
+    background: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 100%);
+}
+
+#about img {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+}
+
+#services {
+    padding-block: 3rem;
+    background: linear-gradient(to bottom, #000000 0%, #333333 100%);
+}
+
+#services h4{
+    color: #fff;
+    margin-block-end: 2rem;
+}
+
+#services .card-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block-end: 3rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+#about .image-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .content-section, #parallax{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    padding-inline: 2rem;
+}
+
+#gallery {
+    padding: 3rem;
+    background: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 100%);
+}
+
+#gallery-content-files{
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+#gallery h4, #parallax h4{
+    margin-block-end:2rem ;
+}
+
+#controlled-tab-example-tab-artists,#controlled-tab-example-tab-athletes{
+    font-family: 'Orbitron', sans-serif;
+}
+
+#parallax {
+    background-image: url("../../assets/parallax.jpg");
+    min-height: 300px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:#fff;
+    text-align: center;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer{
+    padding-block: 1rem;
+    text-align: center;
+    background-color:#2b3035;
+}
+
+#footer .social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer small {
+    color: #f89e00;
+    margin-block:1rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+
+@media (min-width: 768px){
+
+}

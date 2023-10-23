@@ -1,0 +1,46 @@
+nav{
+    font-family: 'Orbitron', sans-serif;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: #f89e00 !important;
+}
+
+#logo{
+    height: 30px;
+}
+
+#banner-content{
+    display: flex;
+    align-items: center;
+    background-image:url("../../assets/background-2.jpg") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#banner-content h1{
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    margin-block-start: 2rem;
+}
+
+#banner-content h2{
+    font-family: 'Pacifico', cursive;
+}
+
+#video-content{
+    display: none;
+}
+
+@media (min-width: 768px){
+    #banner-content{
+        background: unset;
+    }
+    #banner-content h1{
+        font-size: 3rem;
+        color: #f89e00;
+    }
+    #video-content{
+        display: block;
+    }
+}

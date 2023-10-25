@@ -1,8 +1,5 @@
-import Sylver from '../assets/chairman.jpg';
+import Sylver from '../assets/sylver.jpg';
 import May from '../assets/may.jpg';
-
-// const breakpoints = [1080, 640, 384, 256, 128, 96, 64, 48];
-
 
 const unsplashPhotos = [
   { id: "sylver", src:Sylver, name:'Sylver Okumu', width: 4000, height: 5000 },

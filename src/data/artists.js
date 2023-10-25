@@ -1,25 +1,18 @@
-const breakpoints = [1080, 640, 384, 256, 128, 96, 64, 48];
+import Sylver from '../assets/chairman.jpg';
+import May from '../assets/may.jpg';
 
-const unsplashLink = (id, width, height) =>
-  `https://source.unsplash.com/${id}/${width}x${height}`;
+// const breakpoints = [1080, 640, 384, 256, 128, 96, 64, 48];
+
 
 const unsplashPhotos = [
-  { id: "8gVv6nxq6gY", name:'Sylver Okumu', width: 1080, height: 800 },
-  { id: "Dhmn6ete6g8", name: 'May Modesta' ,width: 1080, height: 1620 },
+  { id: "sylver", src:Sylver, name:'Sylver Okumu', width: 4000, height: 5000 },
+  { id: "may", src:May, name: 'May Modesta' ,width: 4000, height: 5000 },
 ];
 
 const photos = unsplashPhotos.map((photo) => ({
-  src: unsplashLink(photo.id, photo.width, photo.height),
+  src: photo.src,
   width: photo.width,
-  height: photo.height,
-  srcSet: breakpoints.map((breakpoint) => {
-    const height = Math.round((photo.height / photo.width) * breakpoint);
-    return {
-      src: unsplashLink(photo.id, breakpoint, height),
-      width: breakpoint,
-      height,
-    };
-  }),
+  height: photo.height
 }));
 
 export default photos;

@@ -1,19 +1,50 @@
+import {useState, useEffect} from 'react';
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import {Parallax} from "react-scroll-parallax";
 import Image from "react-bootstrap/Image";
 import Chairman from "../../assets/chairman.jpg";
+import May from '../../assets/may.jpg';
 import "./styles.css";
 
 function About(){
+  const [state, setState] = useState({
+    position:0,
+    isFlipped: false,
+  });
+
+  const images = [
+    Chairman,
+    May,
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() =>{
+    setState(prevState =>({
+      ...prevState,
+      isFlipped: true,
+    }));
+    setTimeout(() => {
+      setState(prevState =>({
+        ...prevState,
+        position: (prevState.position+1)%images.length,
+        isFlipped: false,
+      }))
+    }, 5000);
+  }, 5000);
+
+  return () => clearInterval(interval);
+  }, [images.length]);
   return (
     <Container fluid id="about">
       <h4 className="text-center">About Us</h4>
       <Parallax>
       <Row>
-        <Col xs={12} md={3} className="image-section">
-            <Image responsive src={Chairman} loading="lazy" roundedCircle thumbnail/>
+        <Col xs={12} md={3} className={`image-section ${state.isFlipped? 'flip':''}`}>
+          <div className="image-wrapper">
+            <Image responsive src={images[state.position]} loading="lazy" roundedCircle thumbnail/>
+          </div>
         </Col>
         <Col xs={12} md={9} className="content-section">
           <div>

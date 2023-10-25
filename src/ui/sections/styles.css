@@ -12,6 +12,7 @@ h4,h5,.h5{
     width: 240px;
     height: 240px;
     object-fit: cover;
+    backface-visibility: hidden;
 }
 
 #services {
@@ -36,6 +37,16 @@ h4,h5,.h5{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#about .image-section .image-wrapper{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 3s;
+}
+
+#about .image-section .flip {
+    transform: rotateX(180deg);
 }
 
 #about .content-section, #parallax{
